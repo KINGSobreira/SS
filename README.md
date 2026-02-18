@@ -45,7 +45,7 @@ Edite o arquivo `src/css/variable.css` para modificar a paleta de cores:
     /* ... outras cores ... */
 }#### Alterar Informações de Contato
 Edite o arquivo `index.html` e substitua:
-- Número do WhatsApp: `5585984163358`
+- Número do WhatsApp: ``
 - Links de redes sociais
 - Textos e descrições
 
