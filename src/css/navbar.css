@@ -1,86 +1,151 @@
-header {
-    background-color: var(--color-neutral-6);
-    padding: 10px 4%;
+.header {
     position: sticky;
     top: 0;
-    z-index: 1;
-
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-
-        .logo {
-            width: 120px;
-        }
-
-        ul {
-            display: none;
-            list-style: none;
-            flex-direction: column;
-            gap: 0.5rem;
-            width: 100%;
-            position: absolute;
-            top: 80px;
-            background-color: transparent;
-            left: 0;
-            padding: 1rem;
-
-            &.show {
-                display: flex;
-
-            }
-
-            li {
-                text-align: center;
-
-                a {
-                    color: var(--color-neutral-0);
-                    text-decoration: none;
-                    font-size: 1rem;
-                    font-weight: 500;
-                    transition: all 0.3s ease;
-
-
-                    &:hover {
-                        color: var(--color-neutral-2);
-                        border-bottom: 1px solid var(--color-neutral-4);
-                    }
-                }
-            }
-
-
-        }
-
-
-        .btn-default {
-            display: none;
-        }
-
-    }
+    z-index: 50;
+    background-color: rgba(13, 10, 18, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.header.scrolled {
+    background-color: rgba(13, 10, 18, 0.92);
+    border-bottom-color: var(--color-border);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
 
-@media (min-width: 769px) {
-    header {
-        .navbar {
-            .btn-mobile {
-                display: none;
-            }
+.navbar {
+    max-width: var(--container);
+    margin: 0 auto;
+    height: var(--header-height);
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
 
-            ul {
-                display: flex;
-                flex-direction: row;
-                position: static;
-                gap: 1rem;
-                width: auto;
-                padding: 0;
-            }
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-text);
+    text-decoration: none;
+}
 
-            .btn-default {
-                display: block;
-            }
-        }
+.brand .logo {
+    width: 44px;
+    height: 44px;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    font-size: 1.15rem;
+    line-height: 1.05;
+    letter-spacing: 0.02em;
+}
+
+.brand-text small {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    letter-spacing: 0.04em;
+}
+
+.btn-mobile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--color-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    padding: 16px 20px 24px;
+    background-color: rgba(13, 10, 18, 0.98);
+    border-bottom: 1px solid var(--color-border);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+}
+
+.nav-links.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-links a:not(.btn) {
+    display: block;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-links a:not(.btn):hover,
+.nav-links a.active {
+    color: var(--color-text);
+    background-color: rgba(139, 92, 246, 0.12);
+}
+
+.nav-cta-mobile {
+    margin-top: 8px;
+}
+
+.nav-cta-mobile .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.navbar .nav-cta {
+    display: none;
+}
+
+@media (min-width: 900px) {
+    .btn-mobile,
+    .nav-cta-mobile {
+        display: none;
+    }
+
+    .navbar .nav-cta {
+        display: inline-flex;
+    }
+
+    .nav-links {
+        position: static;
+        flex-direction: row;
+        gap: 4px;
+        padding: 0;
+        background: none;
+        border: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+    }
+
+    .nav-links a:not(.btn) {
+        padding: 8px 14px;
+        font-size: 0.95rem;
     }
 }
