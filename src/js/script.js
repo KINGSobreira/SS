@@ -1,78 +1,70 @@
+document.documentElement.classList.add('js');
+
+const header = document.querySelector('.header');
 const mobileBtn = document.querySelector('.btn-mobile');
 const navLinks = document.getElementById('nav-links');
-const icon = document.querySelector('.btn-mobile i');
-const header = document.querySelector('header');
+const menuIcon = mobileBtn.querySelector('i');
 
-mobileBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    icon.classList.toggle('fa-times');
-    icon.classList.toggle('fa-bars');
+/* ---------- Menu mobile ---------- */
+function setMenu(open) {
+    navLinks.classList.toggle('show', open);
+    mobileBtn.setAttribute('aria-expanded', String(open));
+    mobileBtn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    menuIcon.classList.toggle('ph-list', !open);
+    menuIcon.classList.toggle('ph-x', open);
+}
+
+mobileBtn.addEventListener('click', () => setMenu(!navLinks.classList.contains('show')));
+navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+document.addEventListener('click', e => {
+    if (navLinks.classList.contains('show') && !header.contains(e.target)) setMenu(false);
 });
 
-const navLinksItems = document.querySelectorAll('#nav-links a');
-navLinksItems.forEach(link => {
-    link.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        icon.classList.remove('fa-times');
-        icon.classList.add('fa-bars');
+/* ---------- Header ao rolar ---------- */
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* ---------- Link ativo conforme a seção visível ---------- */
+const menuLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        menuLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+        });
     });
-});
+}, { rootMargin: '-45% 0px -50% 0px' });
+document.querySelectorAll('main section[id]').forEach(section => sectionObserver.observe(section));
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+/* ---------- Animação de entrada ---------- */
+const revealObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            obs.unobserve(entry.target);
         }
     });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.style.transitionDelay = `${(i % 3) * 80}ms`;
+    revealObserver.observe(el);
 });
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-    
-    updateActiveLink();
-});
-
-function updateActiveLink() {
-    const sections = document.querySelectorAll('section[id]');
-    const scrollY = window.pageYOffset;
-    
-    sections.forEach(section => {
-        const sectionHeight = section.offsetHeight;
-        const sectionTop = section.offsetTop - 100;
-        const sectionId = section.getAttribute('id');
-        
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinksItems.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
+/* ---------- Vídeo do YouTube carregado só ao clicar ---------- */
+const facade = document.querySelector('.video-facade');
+if (facade) {
+    facade.addEventListener('click', () => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${facade.dataset.videoId}?autoplay=1&rel=0`;
+        iframe.title = 'Vídeo de apresentação — SS Soluções em Tecnologia';
+        iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        iframe.allowFullscreen = true;
+        facade.replaceWith(iframe);
     });
 }
 
-const whatsappLinks = document.querySelectorAll('.btn-whatsapp');
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-whatsappLinks.forEach(link => {
-    if (isMobile) {
-        link.addEventListener('click', function(e) {
-            const url = this.href;
-            setTimeout(() => {
-                if (!document.hidden) {
-                    window.open(url, '_blank');
-                }
-            }, 2000);
-        });
-    }
-});
+/* ---------- Ano atual no rodapé ---------- */
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();

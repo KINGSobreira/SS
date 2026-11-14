@@ -1,239 +1,343 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SS Soluções em Tecnologia - Suporte técnico, manutenção de computadores, formatação e instalação de sistemas. Atendimento especializado em T.I.">
-    <meta name="keywords" content="suporte técnico, manutenção computadores, formatação, instalação sistemas, TI, tecnologia">
+    <title>SS Soluções em Tecnologia | Suporte de T.I que vai até você</title>
+    <meta name="description" content="SS Soluções em Tecnologia: montagem e upgrade de PCs, limpeza e manutenção preventiva, formatação, instalação de programas e diagnóstico de problemas. Atendimento de segunda a sábado.">
     <meta name="author" content="SS Soluções em Tecnologia">
-    <meta property="og:title" content="SS Soluções em Tecnologia | Suporte T.I">
-    <meta property="og:description" content="Soluções completas em T.I., com foco em suporte técnico, infraestrutura e consultoria especializada.">
+    <meta name="theme-color" content="#0d0a12">
+
+    <meta property="og:title" content="SS Soluções em Tecnologia | Suporte de T.I">
+    <meta property="og:description" content="A T.I que vai até você. Manutenção, formatação, upgrades e suporte técnico com atendimento confiável e transparente.">
     <meta property="og:type" content="website">
-    
-    <link rel="icon" type="image/png" sizes="32x32" href="src/images/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="src/images/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="src/images/logo.png">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="src/images/logoR.png">
+
+    <link rel="icon" type="image/png" href="src/images/favicon.png">
+    <link rel="apple-touch-icon" href="src/images/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
     <link rel="stylesheet" href="src/css/styles.css">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
-    <title>SS Soluções em Tecnologia | Suporte T.I</title>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ComputerRepair",
+        "name": "SS Soluções em Tecnologia",
+        "description": "Suporte técnico, manutenção de computadores, formatação e instalação de sistemas.",
+        "telephone": "+55 85 98416-3358",
+        "image": "src/images/logoR.png",
+        "openingHours": "Mo-Sa",
+        "sameAs": ["https://www.instagram.com/ss_solucoestec"]
+    }
+    </script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
-            <img src="src/images/logo.png" alt="SS Soluções em Tecnologia" class="logo">
+    <a class="skip-link" href="#container">Pular para o conteúdo</a>
 
-            <button class="btn btn-mobile">
-                <i class="fa-solid fa-bars"></i>
+    <header class="header">
+        <nav class="navbar" aria-label="Navegação principal">
+            <a href="#home" class="brand" aria-label="SS Soluções em Tecnologia — início">
+                <img src="src/images/logo.webp" alt="" width="44" height="44" class="logo">
+                <span class="brand-text">SS <small>Soluções em Tecnologia</small></span>
+            </a>
+
+            <button class="btn-mobile" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-links">
+                <i class="ph ph-list" aria-hidden="true"></i>
             </button>
 
-            <ul id="nav-links">
-                <li><a href="#home">
-                        <i class="ph ph-house"></i>
-                        Início</a></li>
-                <li><a href="#service">
-                        <i class="ph ph-cards"></i>
-                        Serviços</a></li>
-               
-                <li><a href="#about">
-                        <i class="ph ph-seal-warning"></i>
-                        Sobre</a></li>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#service">Serviços</a></li>
+                <li><a href="#how">Como funciona</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li class="nav-cta-mobile">
+                    <a href="https://wa.me/5585984163358?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+                       class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Fale no WhatsApp
+                    </a>
+                </li>
             </ul>
 
-            <a href="https://wa.me/5585984163358?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." 
-               class="btn btn-default btn-whatsapp" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               aria-label="Contatar via WhatsApp">
-                <i class="ph ph-whatsapp-logo"></i>
+            <a href="https://wa.me/5585984163358?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+               class="btn btn-whatsapp nav-cta" target="_blank" rel="noopener noreferrer">
+                <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
                 Contate-nos
             </a>
         </nav>
     </header>
+
     <main id="container">
-        <section id="home">
-            <img src="src/images/logoR.png" alt="Logo redonda" class="home-image" loading="lazy">
-            <h1 class="home-title">
-                A T.I que vai até
-                <span>você</span>
-            </h1>
-            <p class="home-description">
-                Oferecemos soluções completas em T.I., com foco em suporte técnico,
-                infraestrutura e consultoria especializada. Atuamos com seriedade e comprometimento,
-                garantindo eficiência, segurança e qualidade para o seu negócio.
-            </p>
-
-
-                <iframe class="home-video" oiautoplay muted loop playsinline preload="metadata" width="560" height="315" src="https://www.youtube.com/embed/C8EV-b13b0w?si=QYpXrvKPdVRVs3E0"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <div class="video-loading">Carregando vídeo...</div>
-           
-
-            <div class="home-actions">
-                <a href="#service" class="btn btn-default">
-                    Conhecer
-                </a>
-                <a href="https://wa.me/5585984163358?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços." 
-                   class="btn btn-default btn-whatsapp" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   aria-label="Contatar via WhatsApp">
-                    <i class="ph ph-whatsapp-logo"></i>
-                    Contate-nos
-                </a>
-            </div>
-        </section>
-
-        <section id="service">
-            <h2 class="title">
-                Serviços
-            </h2>
-
-            <div class="service-cards">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="ph ph-desktop"></i>
-                    </div>
-                    <h2 class="service-title">Montagem e Upgrade de Computadores</h2>
-                    <p class="service-text">
-                        Montagem completa de PCs novos, substituição de peças, upgrades de desempenho e otimização geral do hardware.
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-inner">
+                <div class="hero-text reveal">
+                    <span class="eyebrow"><i class="ph-fill ph-map-pin" aria-hidden="true"></i> Atendimento a domicílio e empresas</span>
+                    <h1 class="hero-title">
+                        A T.I que vai até <span class="highlight">você</span>
+                    </h1>
+                    <p class="hero-description">
+                        Soluções completas em T.I., com foco em suporte técnico, infraestrutura e consultoria
+                        especializada. Atuamos com seriedade e comprometimento, garantindo eficiência, segurança
+                        e qualidade para você e para o seu negócio.
                     </p>
+
+                    <div class="hero-actions">
+                        <a href="https://wa.me/5585984163358?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+                           class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
+                            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+                            Solicitar orçamento
+                        </a>
+                        <a href="#service" class="btn btn-outlined btn-lg">
+                            Ver serviços
+                            <i class="ph ph-arrow-down" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <ul class="hero-badges">
+                        <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i> Orçamento sem compromisso</li>
+                        <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i> Segunda a sábado</li>
+                        <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i> Atendimento transparente</li>
+                    </ul>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="ph ph-wrench"></i>
+                <div class="hero-media reveal">
+                    <div class="video-frame">
+                        <button class="video-facade" type="button" data-video-id="C8EV-b13b0w"
+                                aria-label="Reproduzir vídeo de apresentação da SS Soluções em Tecnologia">
+                            <img src="https://i.ytimg.com/vi/C8EV-b13b0w/hqdefault.jpg" alt="" loading="lazy"
+                                 onerror="this.remove()">
+                            <span class="video-fallback">
+                                <img src="src/images/logoR.webp" alt="" width="160" height="160">
+                            </span>
+                            <span class="play-button"><i class="ph-fill ph-play" aria-hidden="true"></i></span>
+                            <span class="video-label">Assista à nossa apresentação</span>
+                        </button>
                     </div>
-                    <h2 class="service-title">Limpeza e Manutenção Preventiva</h2>
-                    <p class="service-text">
-                        Limpeza interna e externa, troca de pasta térmica, verificação de superaquecimento e cuidados
-                        para aumentar a vida útil do equipamento.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="ph ph-hard-drive"></i>
-                    </div>
-                    <h2 class="service-title">Formatação e Instalação de Sistemas Operacionais</h2>
-                    <p class="service-text">
-                        Instalação limpa ou reinstalação de Windows, Linux ou outros sistemas, com otimização e
-                        atualização completa.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="ph ph-gear"></i>
-                    </div>
-                    <h2 class="service-title">Instalação de Programas e Configurações Essenciais</h2>
-                    <p class="service-text">
-                        Instalação e configuração dos principais programas do dia a dia: pacote Office, navegadores,
-                        ferramentas de produtividade, antivírus e outros.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="ph ph-magnifying-glass"></i>
-                    </div>
-                    <h2 class="service-title">Diagnóstico e Correção de Problemas</h2>
-                    <p class="service-text">
-                        Identificação de falhas, lentidão, travamentos e problemas de inicialização. Correções rápidas e
-                        eficientes.
-                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="about">
-            <h2 class="title">
-                Sobre nós
-            </h2>
+        <!-- SERVIÇOS -->
+        <section id="service" class="section">
+            <div class="section-inner">
+                <header class="section-header reveal">
+                    <span class="section-tag">O que fazemos</span>
+                    <h2 class="title">Serviços</h2>
+                    <p class="section-subtitle">Do conserto ao upgrade: cuidamos do seu computador para que você só se preocupe em usá-lo.</p>
+                </header>
 
-            <div class="about-content">
-            <div class="about-info">
-                <h3>
-                    Minha <span> História</span>
-                </h3>
+                <div class="service-cards">
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="ph ph-desktop-tower" aria-hidden="true"></i></div>
+                        <h3 class="service-title">Montagem e Upgrade de Computadores</h3>
+                        <p class="service-text">
+                            Montagem completa de PCs novos, substituição de peças, upgrades de desempenho e otimização
+                            geral do hardware.
+                        </p>
+                    </article>
 
-                <p>
-                    Desde muito cedo, a tecnologia fez parte do meu dia a dia. Sempre fui fascinado por entender como as
-                    coisas funcionam, desmontar, montar e explorar tudo o que pudesse me ensinar algo novo. Essa
-                    curiosidade me levou ao meu maior interesse: os computadores. Eles sempre estiveram presentes na
-                    minha rotina e despertaram em mim a vontade constante de aprender mais.
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="ph ph-broom" aria-hidden="true"></i></div>
+                        <h3 class="service-title">Limpeza e Manutenção Preventiva</h3>
+                        <p class="service-text">
+                            Limpeza interna e externa, troca de pasta térmica, verificação de superaquecimento e
+                            cuidados para aumentar a vida útil do equipamento.
+                        </p>
+                    </article>
 
-                    Na adolescência, decidi montar meu primeiro computador sozinho — e foi aí que tudo começou de
-                    verdade. A partir desse momento, percebi que queria seguir no caminho da tecnologia. Hoje trabalho
-                    na área de suporte em TI, adquirindo experiência prática com equipamentos, sistemas, redes e
-                    soluções diversas.
-                </p>
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="ph ph-hard-drives" aria-hidden="true"></i></div>
+                        <h3 class="service-title">Formatação e Instalação de Sistemas</h3>
+                        <p class="service-text">
+                            Instalação limpa ou reinstalação de Windows, Linux ou outros sistemas, com otimização e
+                            atualização completa.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="ph ph-app-window" aria-hidden="true"></i></div>
+                        <h3 class="service-title">Instalação de Programas e Configurações</h3>
+                        <p class="service-text">
+                            Instalação e configuração dos principais programas do dia a dia: pacote Office, navegadores,
+                            ferramentas de produtividade, antivírus e outros.
+                        </p>
+                    </article>
+
+                    <article class="service-card reveal">
+                        <div class="service-icon"><i class="ph ph-magnifying-glass" aria-hidden="true"></i></div>
+                        <h3 class="service-title">Diagnóstico e Correção de Problemas</h3>
+                        <p class="service-text">
+                            Identificação de falhas, lentidão, travamentos e problemas de inicialização. Correções
+                            rápidas e eficientes.
+                        </p>
+                    </article>
+
+                    <article class="service-card service-card-cta reveal">
+                        <div class="service-icon"><i class="ph ph-chat-circle-dots" aria-hidden="true"></i></div>
+                        <h3 class="service-title">Precisa de outra coisa?</h3>
+                        <p class="service-text">
+                            Conte o seu problema pelo WhatsApp. Avaliamos o caso e indicamos a melhor solução.
+                        </p>
+                        <a href="https://wa.me/5585984163358?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20um%20servi%C3%A7o."
+                           class="service-link" target="_blank" rel="noopener noreferrer">
+                            Falar agora <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
                 </div>
-                <div class="about-info">
-                    <h3>
-                        Nosso <span> Propósito</span>
-                    </h3>
-    
-                    <p>
-                        Agora, aos 25 anos, <span>decidi transformar esse conhecimento em serviço, oferecendo soluções
-                        profissionais e acessíveis para quem precisa de suporte, manutenção e orientação tecnológica. Meu
-                        objetivo é entregar um atendimento confiável, transparente e eficiente, sempre buscando a melhor
-                        experiência para cada cliente.</span>
-                    </p>
             </div>
-        </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+        <section id="how" class="section section-dark">
+            <div class="section-inner">
+                <header class="section-header reveal">
+                    <span class="section-tag">Simples e rápido</span>
+                    <h2 class="title">Como funciona</h2>
+                </header>
+
+                <ol class="steps">
+                    <li class="step reveal">
+                        <span class="step-number">1</span>
+                        <i class="ph ph-whatsapp-logo step-icon" aria-hidden="true"></i>
+                        <h3>Você chama</h3>
+                        <p>Entre em contato pelo WhatsApp e descreva o que está acontecendo com o seu equipamento.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-number">2</span>
+                        <i class="ph ph-clipboard-text step-icon" aria-hidden="true"></i>
+                        <h3>Avaliamos</h3>
+                        <p>Fazemos o diagnóstico e passamos um orçamento claro, sem surpresas.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-number">3</span>
+                        <i class="ph ph-check-circle step-icon" aria-hidden="true"></i>
+                        <h3>Resolvemos</h3>
+                        <p>Com sua aprovação, executamos o serviço e entregamos tudo funcionando.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="about" class="section">
+            <div class="section-inner about-grid">
+                <div class="about-visual reveal">
+                    <img src="src/images/logoR.webp" alt="Logo da SS Soluções em Tecnologia" width="320" height="320" loading="lazy">
+                </div>
+
+                <div class="about-text">
+                    <header class="section-header section-header-left reveal">
+                        <span class="section-tag">Quem somos</span>
+                        <h2 class="title">Sobre nós</h2>
+                    </header>
+
+                    <div class="about-info reveal">
+                        <h3>Minha <span>história</span></h3>
+                        <p>
+                            Desde muito cedo, a tecnologia fez parte do meu dia a dia. Sempre fui fascinado por
+                            entender como as coisas funcionam, desmontar, montar e explorar tudo o que pudesse me
+                            ensinar algo novo. Essa curiosidade me levou ao meu maior interesse: os computadores.
+                        </p>
+                        <p>
+                            Na adolescência, decidi montar meu primeiro computador sozinho — e foi aí que tudo começou
+                            de verdade. Hoje trabalho na área de suporte em TI, adquirindo experiência prática com
+                            equipamentos, sistemas, redes e soluções diversas.
+                        </p>
+                    </div>
+
+                    <div class="about-info reveal">
+                        <h3>Nosso <span>propósito</span></h3>
+                        <p>
+                            Agora, aos 25 anos, decidi transformar esse conhecimento em serviço, oferecendo soluções
+                            profissionais e acessíveis para quem precisa de suporte, manutenção e orientação
+                            tecnológica. Meu objetivo é entregar um atendimento <strong>confiável, transparente e
+                            eficiente</strong>, sempre buscando a melhor experiência para cada cliente.
+                        </p>
+                    </div>
+
+                    <ul class="values reveal">
+                        <li><i class="ph ph-shield-check" aria-hidden="true"></i> Confiança</li>
+                        <li><i class="ph ph-eye" aria-hidden="true"></i> Transparência</li>
+                        <li><i class="ph ph-lightning" aria-hidden="true"></i> Eficiência</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="cta-inner reveal">
+                <h2>Seu computador está dando trabalho?</h2>
+                <p>Fale com a gente agora e receba um orçamento sem compromisso.</p>
+                <a href="https://wa.me/5585984163358?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+                   class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
+                    <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
+                    Chamar no WhatsApp
+                </a>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h3>SS Soluções em Tecnologia</h3>
-                <p>Soluções completas em T.I para o seu negócio. Atendimento especializado com qualidade e comprometimento.</p>
-                <img src="src/images/logo.png" alt="Logo SS" style="width: 120px; margin-top: 20px; filter: brightness(0) invert(1);">
-            </div>
-            
-            <div class="footer-section">
-                <h4>Contato</h4>
-                <a href="https://wa.me/5585984163358" target="_blank" rel="noopener noreferrer" class="footer-link">
-                    <i class="ph ph-whatsapp-logo"></i> 
-                    <span>(85) 98416-3358</span>
+                <a href="#home" class="brand" aria-label="Voltar ao início">
+                    <img src="src/images/logo.webp" alt="" width="44" height="44" class="logo">
+                    <span class="brand-text">SS <small>Soluções em Tecnologia</small></span>
                 </a>
-                <p style="margin-top: 15px; color: var(--color-neutral-4); font-size: 0.9rem;">
-                    Atendimento de segunda a sábado
-                </p>
+                <p>Soluções completas em T.I. para você e para o seu negócio. Atendimento especializado com qualidade e comprometimento.</p>
             </div>
-            
+
             <div class="footer-section">
-                <h4>Redes Sociais</h4>
-                <p style="margin-bottom: 20px; color: var(--color-neutral-4);">Siga-nos nas redes sociais</p>
+                <h3>Navegação</h3>
+                <ul class="footer-list">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#service">Serviços</a></li>
+                    <li><a href="#how">Como funciona</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <ul class="footer-list">
+                    <li>
+                        <a href="https://wa.me/5585984163358" target="_blank" rel="noopener noreferrer">
+                            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> (85) 98416-3358
+                        </a>
+                    </li>
+                    <li><i class="ph ph-clock" aria-hidden="true"></i> Segunda a sábado</li>
+                </ul>
                 <div class="social-links">
-                    <a href="https://www.instagram.com/ss_solucoestec?igsh=YmVibHdxOWxxMWkw&utm_source=qr" aria-label="Instagram" class="social-link">
-                        <i class="ph ph-instagram-logo"></i>
+                    <a href="https://www.instagram.com/ss_solucoestec" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+                        <i class="ph ph-instagram-logo" aria-hidden="true"></i>
                     </a>
                     <a href="https://wa.me/5585984163358" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-link">
-                        <i class="ph ph-whatsapp-logo"></i>
+                        <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-            <p>&copy; 2024 SS Soluções em Tecnologia. Todos os direitos reservados.</p>
+            <p>&copy; <span id="year">2026</span> SS Soluções em Tecnologia. Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script src="src/js/script.js"></script>
+    <a href="https://wa.me/5585984163358?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os."
+       class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>
+    </a>
+
+    <script src="src/js/script.js" defer></script>
 </body>
 
 </html>

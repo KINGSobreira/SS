@@ -14,11 +14,11 @@ Projeto Landing Page/
 │ └── script.js # Funcionalidades JavaScript
 │
 ├── images/
-│ ├── logo.png # Logo da empresa
-│ ├── logoR.png # Logo redonda
-│ ├── background-inite.png # Background da seção inicial
-│ ├── background-medium.png # Background da seção de serviços
-│ └── background-end.png # Background da seção sobre
+│ ├── logo.png / logo.webp # Logo da empresa (WebP otimizado é o usado no site)
+│ ├── logoR.png / logoR.webp # Logo redonda
+│ ├── background-inite.webp # Textura de rede do topo (hero)
+│ ├── favicon.png # Ícone da aba
+│ └── apple-touch-icon.png # Ícone para iOS
 │
 └── videos/
 └──  postado no YouTube # Vídeo demonstrativo
@@ -39,9 +39,9 @@ Projeto Landing Page/
 Edite o arquivo `src/css/variable.css` para modificar a paleta de cores:
 
 :root {
-    --color-neutral-0: #ffff;
-    --color-neutral-1: #5A3872;
-    --color-neutral-2: #64438b;
+    --color-primary: #8b5cf6;
+    --color-primary-soft: #b895d4;
+    --color-bg: #0d0a12;
     /* ... outras cores ... */
 }#### Alterar Informações de Contato
 Edite o arquivo `index.html` e substitua:
@@ -67,31 +67,34 @@ Apresenta os principais serviços oferecidos:
 - Instalação de Programas e Configurações Essenciais
 - Diagnóstico e Correção de Problemas
 
-### 3. Sobre Nós
+### 3. Como Funciona
+- Passo a passo do atendimento (contato, avaliação, solução)
+
+### 4. Sobre Nós
 - História da empresa
 - Propósito e valores
 - Informações sobre o fundador
 
-### 4. Footer (Rodapé)
+### 5. Footer (Rodapé)
 - Informações de contato
 - Links para redes sociais
 - Horário de atendimento
 
 ## 🎨 Funcionalidades JavaScript
 
-- **Menu Mobile**: Toggle do menu hambúrguer em dispositivos móveis
-- **Scroll Suave**: Navegação suave entre seções ao clicar nos links
-- **Navegação Ativa**: Destaque automático do link da seção atual durante o scroll
-- **Header Fixo**: Header que muda de estilo ao fazer scroll
-- **Integração WhatsApp**: Detecção de dispositivo móvel para melhor experiência no WhatsApp
+- **Menu Mobile**: menu hambúrguer acessível (fecha com Esc ou clicando fora)
+- **Navegação Ativa**: destaque do link da seção visível (IntersectionObserver)
+- **Header Fixo**: header translúcido que muda de estilo ao rolar
+- **Animações de entrada**: elementos aparecem ao rolar (respeita "reduzir movimento")
+- **Vídeo sob demanda**: o YouTube só carrega ao clicar no play, deixando o site mais rápido
+- **Botão flutuante do WhatsApp** e ano do rodapé atualizado automaticamente
 
 ## 📐 Responsividade
 
 O site é totalmente responsivo com breakpoints para:
-- **Mobile**: até 768px
-- **Tablet**: 769px a 1024px
-- **Desktop**: acima de 1024px
-- **Telas pequenas**: até 480px (ajustes específicos)
+- **Telas pequenas**: até 480px
+- **Mobile/Tablet**: até 899px (menu hambúrguer)
+- **Desktop**: a partir de 900px
 
 ## 🌐 Compatibilidade de Navegadores
 
@@ -113,8 +116,8 @@ O site é totalmente responsivo com breakpoints para:
 - [ ] Integração com Google Maps
 - [ ] Sistema de depoimentos/testemunhos
 - [ ] Blog ou seção de notícias
-- [ ] Otimização de imagens (WebP)
-- [ ] Lazy loading para imagens e vídeos
+- [x] Otimização de imagens (WebP)
+- [x] Lazy loading para imagens e vídeos
 
 ## 📝 Licença
 
